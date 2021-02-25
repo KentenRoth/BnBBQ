@@ -9,6 +9,12 @@ body {
   overflow: hidden;
 }
 
+.title {
+  color: #7F7E7E;
+  font-size: 22px;
+  padding: 10px 0 20px 0;
+}
+
 .nav {
   background: #010101;
   height: 50px;
@@ -31,6 +37,18 @@ body {
 }
 .logoBox img {
   width: 100%;
+}
+
+.content {
+  background: #7F7E7E;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.featuredTitle {
+  color: #181818;
+  font-size: 22px;
+  padding: 10px 0 20px 0;
 }
 
 /*# sourceMappingURL=App.css.map */
