@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import LandingPage from './Components/LandingPage/LandingPage';
 
 class App extends React.Component {
 	constructor(props) {
@@ -10,7 +12,13 @@ class App extends React.Component {
 	componentDidMount() {}
 
 	render() {
-		return <div>'Hello'</div>;
+		return (
+			<BrowserRouter>
+				<Switch>
+					<Route path="/" component={LandingPage} exact />
+				</Switch>
+			</BrowserRouter>
+		);
 	}
 }
 
