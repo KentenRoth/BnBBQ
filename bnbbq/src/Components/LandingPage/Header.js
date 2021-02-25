@@ -1,10 +1,11 @@
-import logo from '../../images/logo.png';
-
 const Header = () => {
 	return (
 		<div className="heading">
 			<div className="logoBox">
-				<img src={logo} alt="logo" />
+				<img
+					src={`${process.env.PUBLIC_URL}/assets/images/logo.png`}
+					alt="logo"
+				/>
 			</div>
 		</div>
 	);
