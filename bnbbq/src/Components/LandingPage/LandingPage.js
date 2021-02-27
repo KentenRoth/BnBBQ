@@ -7,7 +7,7 @@ class LandingPage extends React.Component {
 		return (
 			<div>
 				<Header />
-				<FeaturedPosts posts={this.props.posts} />
+				<FeaturedPosts feature={this.props.feature} />
 			</div>
 		);
 	}

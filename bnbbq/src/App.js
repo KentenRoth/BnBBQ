@@ -9,7 +9,9 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			posts: [],
+			featuredPosts: [],
+			beardPosts: [],
+			bbqPosts: [],
 		};
 	}
 
@@ -24,7 +26,11 @@ class App extends React.Component {
 				<BrowserRouter>
 					<Switch>
 						<Route path="/" exact>
-							<LandingPage posts={this.state.posts} />
+							<LandingPage
+								feature={this.state.featuredPosts}
+								beard={this.state.beardPosts}
+								bbq={this.state.bbqPosts}
+							/>
 						</Route>
 					</Switch>
 				</BrowserRouter>
@@ -34,7 +40,25 @@ class App extends React.Component {
 
 	getPosts = () => {
 		axios.get('/posts').then((response) => {
-			this.setState({ posts: response.data });
+			const posts = response.data;
+			const feature = [];
+			const beard = [];
+			const bbq = [];
+			posts.map((post) => {
+				if (post.tags[0] === 'featured') {
+					return feature.push(post);
+				}
+				if (post.tags[0] === 'beard') {
+					return beard.push(post);
+				}
+				if (post.tags[0] === 'barbecue') {
+					return bbq.push(post);
+				}
+				return;
+			});
+
+			this.setState({ featuredPosts: feature });
+			return console.log(feature);
 		});
 	};
 }

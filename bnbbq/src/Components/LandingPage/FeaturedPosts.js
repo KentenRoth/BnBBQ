@@ -11,7 +11,7 @@ class FeaturedPost extends React.Component {
 						<h1>Featured Posts</h1>
 					</div>
 					<div className="featuredPosts">
-						{this.props.posts.map((post) => {
+						{this.props.feature.map((post) => {
 							return <PostCard post={post} key={post._id} />;
 						})}
 					</div>
