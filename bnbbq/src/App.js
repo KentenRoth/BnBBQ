@@ -54,10 +54,12 @@ class App extends React.Component {
 				if (post.tags[0] === 'barbecue') {
 					return bbq.push(post);
 				}
-				return;
+				return null;
 			});
 
 			this.setState({ featuredPosts: feature });
+			this.setState({ beardPosts: beard });
+			this.setState({ bbqPosts: bbq });
 			return console.log(feature);
 		});
 	};
