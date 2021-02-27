@@ -3,14 +3,11 @@ import Header from './Header';
 import FeaturedPosts from './FeaturedPosts';
 
 class LandingPage extends React.Component {
-	componentDidMount() {
-		console.log(this.props);
-	}
 	render() {
 		return (
 			<div>
 				<Header />
-				<FeaturedPosts />
+				<FeaturedPosts posts={this.props.posts} />
 			</div>
 		);
 	}
