@@ -13,7 +13,7 @@ class PostCard extends React.Component {
 						alt="logo"
 					/>
 				</div>
-				<div className="postCardText">
+				<div className="postCardTitle">
 					<p>{title}</p>
 				</div>
 				<div className="postCardSecondary">{this.secondaryText()}</div>
@@ -35,9 +35,9 @@ class PostCard extends React.Component {
 	postButton = () => {
 		const beardOrBBQ = this.props.post.tags[1];
 		if (beardOrBBQ === 'barbecue') {
-			return <button className="red">Lets Grill</button>;
+			return <button className="postButton red">Lets Grill</button>;
 		} else {
-			return <button className="green">Get Bearded</button>;
+			return <button className="postButton green">Get Bearded</button>;
 		}
 	};
 }
