@@ -4,6 +4,7 @@ import axios from 'axios';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPage from './Components/LandingPage/LandingPage';
 import NavBar from './Components/Nav';
+import Footer from './Components/Footer';
 
 class App extends React.Component {
 	constructor(props) {
@@ -34,6 +35,7 @@ class App extends React.Component {
 						</Route>
 					</Switch>
 				</BrowserRouter>
+				<Footer />
 			</div>
 		);
 	}

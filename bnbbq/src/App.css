@@ -207,4 +207,25 @@ body {
   transition: ease-in 0.2s;
 }
 
+.footer {
+  postion: relative;
+  bottom: 0;
+  background: #010101;
+  min-height: 170px;
+}
+
+.footerLogo {
+  padding-top: 20px;
+}
+.footerLogo img {
+  height: 75px;
+}
+
+.icon {
+  padding-bottom: 10px;
+}
+.icon a {
+  color: #F0F0F0;
+}
+
 /*# sourceMappingURL=app.css.map */
