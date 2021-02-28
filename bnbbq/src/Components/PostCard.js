@@ -33,7 +33,7 @@ class PostCard extends React.Component {
 	};
 
 	postButton = () => {
-		const beardOrBBQ = this.props.post.tags[1];
+		const beardOrBBQ = this.props.post.tags[0];
 		if (beardOrBBQ === 'barbecue') {
 			return <button className="postButton red">Lets Grill</button>;
 		} else {
