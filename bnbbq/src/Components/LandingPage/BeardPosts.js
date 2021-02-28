@@ -2,9 +2,7 @@ import React from 'react';
 import PostCard from '../PostCard';
 
 class BeardPosts extends React.Component {
-	componentDidMount() {
-		console.log(this.props);
-	}
+	componentDidMount() {}
 	render() {
 		return (
 			<div className="container">
@@ -15,6 +13,9 @@ class BeardPosts extends React.Component {
 					{this.props.beard.map((post) => {
 						return <PostCard post={post} key={post._id} />;
 					})}
+				</div>
+				<div className="largeButton">
+					<button className="moreBeardButton">More Bearded</button>
 				</div>
 			</div>
 		);
