@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-	color: $off-white;
+	color: #010101;
 	list-style: none;
 	display: flex;
 	flex-flow: row nowrap;
+	font-weight: 600;
 	margin: 0;
 	border-bottom-left-radius: 10px;
 
@@ -21,14 +22,14 @@ const Ul = styled.ul`
 			open ? 'translateX(0)' : 'translateX(100%)'};
 		top: 0;
 		right: 0;
-		height: 25vh;
+		max-height: 50vh;
 		width: 200px;
 		padding-top: 50px;
 		text-align: left;
 		transition: transform 0.2s ease-in-out;
 
 		li {
-			padding: 20px 10px;
+			padding: 25px 0;
 		}
 	}
 `;
