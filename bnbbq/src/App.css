@@ -23,11 +23,31 @@ body {
 
 .nav {
   background: #010101;
-  height: 50px;
+  display: flex;
+  height: 55px;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 100;
+  z-index: 2;
+}
+
+.navLogo {
+  padding: 5px 20px;
+}
+.navLogo img {
+  height: 45px;
+}
+
+ul {
+  color: #F0F0F0;
+  display: flex;
+  list-style: none;
+  flex-flow: row nowrap;
+}
+ul li {
+  padding: 0px 20px;
+  z-index: 3;
 }
 
 .heading {
