@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './Components/Nav/Nav';
 import LandingPage from './Components/LandingPage/LandingPage';
 import AboutPage from './Components/AboutPage/AboutPage';
+import SearchPage from './Components/SearchPage/SearchPage';
 import Footer from './Components/Footer';
 
 class App extends React.Component {
@@ -35,6 +36,7 @@ class App extends React.Component {
 							/>
 						</Route>
 						<Route path="/about" component={AboutPage} />
+						<Route path="/search" component={SearchPage} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />

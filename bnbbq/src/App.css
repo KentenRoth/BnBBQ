@@ -259,6 +259,12 @@ ul li {
   text-align: left;
 }
 
+.searchContent {
+  background: #181818;
+  padding-top: 50px;
+  min-height: 80vh;
+}
+
 .footer {
   postion: relative;
   bottom: 0;
