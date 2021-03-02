@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Ul = styled.ul`
 	color: #f0f0f0;
@@ -38,11 +39,32 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
 	return (
 		<Ul open={open}>
-			<li>Home</li>
-			<li>About</li>
+			<li>
+				<Link
+					style={{ color: 'inherit', textDecoration: 'inherit' }}
+					to="/"
+				>
+					Home
+				</Link>
+			</li>
+			<li>
+				<Link
+					style={{ color: 'inherit', textDecoration: 'inherit' }}
+					to="/about"
+				>
+					About
+				</Link>
+			</li>
 			<li>Beard Blog</li>
 			<li>BBQ Blog</li>
-			<li>Search</li>
+			<li>
+				<Link
+					style={{ color: 'inherit', textDecoration: 'inherit' }}
+					to="/search"
+				>
+					Search
+				</Link>
+			</li>
 		</Ul>
 	);
 };
