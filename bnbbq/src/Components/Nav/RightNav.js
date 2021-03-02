@@ -27,7 +27,7 @@ const Ul = styled.ul`
 		width: 200px;
 		padding-top: 50px;
 		text-align: left;
-		transition: transform 0.2s ease-in-out;
+		transition: transform 0.4s ease-in-out;
 
 		li {
 			padding: 25px 0;
@@ -42,6 +42,7 @@ const RightNav = ({ open }) => {
 			<li>About</li>
 			<li>Beard Blog</li>
 			<li>BBQ Blog</li>
+			<li>Search</li>
 		</Ul>
 	);
 };

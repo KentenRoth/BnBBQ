@@ -26,7 +26,7 @@ const BurgerStyle = styled.div`
 		background: ${({ open }) => (open ? '#010101' : '#F0F0F0')};
 		border-radius: 10px;
 		transform-origin: 1px;
-		transition: all 0.2s linear;
+		transition: all 0.4s linear;
 	}
 
 	div:nth-child(1) {
