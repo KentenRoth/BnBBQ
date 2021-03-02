@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-	color: #010101;
+	color: #f0f0f0;
 	list-style: none;
 	display: flex;
 	flex-flow: row nowrap;
@@ -15,6 +15,7 @@ const Ul = styled.ul`
 	}
 
 	@media (max-width: 768px) {
+		color: #010101;
 		flex-flow: column nowrap;
 		background: #7f7e7e;
 		position: fixed;

@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import LandingPage from './Components/LandingPage/LandingPage';
 import NavBar from './Components/Nav/Nav';
+import LandingPage from './Components/LandingPage/LandingPage';
+import AboutPage from './Components/AboutPage/AboutPage';
 import Footer from './Components/Footer';
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
 								bbq={this.state.bbqPosts}
 							/>
 						</Route>
+						<Route path="/about" component={AboutPage} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />
