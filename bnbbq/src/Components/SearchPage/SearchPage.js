@@ -21,6 +21,9 @@ class SearchPage extends React.Component {
 					<div className="title">
 						<h1>Lets Find It!</h1>
 					</div>
+					<div>
+						<SearchBar />
+					</div>
 				</div>
 			</div>
 		);
