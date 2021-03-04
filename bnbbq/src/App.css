@@ -265,6 +265,33 @@ ul li {
   min-height: 80vh;
 }
 
+.searchInput input {
+  border: none;
+  border-radius: 2px;
+  height: 25px;
+  padding-left: 5px;
+  margin-right: 10px;
+}
+
+.searchButton {
+  background: #7F7E7E;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5.5px 15px;
+  margin-top: 10px;
+  height: 100%;
+  transition: ease-in 0.2s;
+}
+
+.searchButton:hover {
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+  transition: ease-in 0.2s;
+}
+
 .noResultsText {
   color: #F0F0F0;
 }
