@@ -7,6 +7,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import AboutPage from './Components/AboutPage/AboutPage';
 import SearchPage from './Components/SearchPage/SearchPage';
 import BeardBlog from './Components/BeardPage/BeardPage';
+import BBQPage from './Components/BBQPage/BBQPage';
 import Footer from './Components/Footer';
 
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
 						<Route path="/about" component={AboutPage} />
 						<Route path="/search" component={SearchPage} />
 						<Route path="/beardBlog" component={BeardBlog} />
+						<Route path="/bbqPage" component={BBQPage} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />
