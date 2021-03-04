@@ -58,7 +58,7 @@ const RightNav = ({ open }) => {
 			<li>
 				<Link
 					style={{ color: 'inherit', textDecoration: 'inherit' }}
-					to="/beardBlog"
+					to="/beardPage"
 				>
 					Beard Blog
 				</Link>
