@@ -55,7 +55,14 @@ const RightNav = ({ open }) => {
 					About
 				</Link>
 			</li>
-			<li>Beard Blog</li>
+			<li>
+				<Link
+					style={{ color: 'inherit', textDecoration: 'inherit' }}
+					to="/beardBlog"
+				>
+					Beard Blog
+				</Link>
+			</li>
 			<li>BBQ Blog</li>
 			<li>
 				<Link

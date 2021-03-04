@@ -6,6 +6,7 @@ import NavBar from './Components/Nav/Nav';
 import LandingPage from './Components/LandingPage/LandingPage';
 import AboutPage from './Components/AboutPage/AboutPage';
 import SearchPage from './Components/SearchPage/SearchPage';
+import BeardBlog from './Components/BeardPage/BeardPage';
 import Footer from './Components/Footer';
 
 class App extends React.Component {
@@ -37,6 +38,7 @@ class App extends React.Component {
 						</Route>
 						<Route path="/about" component={AboutPage} />
 						<Route path="/search" component={SearchPage} />
+						<Route path="/beardBlog" component={BeardBlog} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />
