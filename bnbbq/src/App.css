@@ -265,6 +265,31 @@ ul li {
   min-height: 80vh;
 }
 
+.noResultsText {
+  color: #F0F0F0;
+}
+
+.searchPosts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  width: 100%;
+  padding: 10px 0 15px 0;
+}
+
+.results {
+  display: flex;
+}
+
+.noResults {
+  display: block;
+}
+
+.resultsContent {
+  margin-top: 50px;
+}
+
 .footer {
   postion: relative;
   bottom: 0;

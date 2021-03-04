@@ -1,12 +1,25 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
+	state = {
+		searchTerm: '',
+	};
+
+	onSearchSubmit = (e) => {
+		e.preventDefault();
+		this.props.search(this.state.searchTerm);
+	};
 	render() {
 		return (
 			<div>
 				<div>
-					<input type="text"></input>
-					<button>Search</button>
+					<input
+						onChange={(e) =>
+							this.setState({ searchTerm: e.target.value })
+						}
+						type="text"
+					></input>
+					<button onClick={this.onSearchSubmit}>Search</button>
 				</div>
 			</div>
 		);

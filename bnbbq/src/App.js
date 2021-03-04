@@ -63,10 +63,11 @@ class App extends React.Component {
 				return null;
 			});
 
-			this.setState({ featuredPosts: feature });
-			this.setState({ beardPosts: beard });
-			this.setState({ bbqPosts: bbq });
-			return console.log(feature);
+			this.setState({
+				featuredPosts: feature,
+				beardPosts: beard,
+				bbqPosts: bbq,
+			});
 		});
 	};
 }
