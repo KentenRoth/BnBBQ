@@ -292,7 +292,7 @@ ul li {
   transition: ease-in 0.2s;
 }
 
-.noResultsText {
+.noResultsText, .preSearch {
   color: #F0F0F0;
 }
 

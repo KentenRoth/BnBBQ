@@ -3,19 +3,21 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import NoResults from './NoResults';
 import PostCard from '../PostCard';
+import PreSearch from './PreSearch';
 
 class SearchPage extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			posts: [],
+			hasSearched: false,
 		};
 	}
 
 	onSearch = async (searchTerm) => {
 		try {
 			const response = await axios.get(`/posts?search=${searchTerm}`);
-			this.setState({ posts: response.data });
+			this.setState({ posts: response.data, hasSearched: true });
 		} catch (e) {
 			console.log(e);
 		}
@@ -42,13 +44,20 @@ class SearchPage extends React.Component {
 	}
 
 	gettingResults = () => {
-		if (this.state.posts.length === 0) {
+		if (this.state.hasSearched === false) {
+			return (
+				<div className="preSearch">
+					<PreSearch />
+				</div>
+			);
+		} else if (this.state.posts.length === 0) {
 			return (
 				<div className="noResults">
 					<NoResults />
 				</div>
 			);
 		}
+
 		return (
 			<div className="results">
 				<div className="searchPosts">
