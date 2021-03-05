@@ -8,6 +8,7 @@ import AboutPage from './Components/AboutPage/AboutPage';
 import SearchPage from './Components/SearchPage/SearchPage';
 import BeardPage from './Components/BeardPage/BeardPage';
 import BBQPage from './Components/BBQPage/BBQPage';
+import Post from './Components/PostPage/Post';
 import Footer from './Components/Footer';
 
 class App extends React.Component {
@@ -41,6 +42,7 @@ class App extends React.Component {
 						<Route path="/search" component={SearchPage} />
 						<Route path="/beardPage" component={BeardPage} />
 						<Route path="/bbqPage" component={BBQPage} />
+						<Route path="/post/" component={Post} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />
