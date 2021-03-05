@@ -228,11 +228,11 @@ ul li {
 }
 
 .about {
-  color: #181818;
+  color: #F0F0F0;
 }
 
 .aboutContent {
-  background: #7F7E7E;
+  background: #181818;
   padding: 50px;
 }
 
@@ -242,10 +242,10 @@ ul li {
 }
 
 .aboutTextCard {
-  background: #F0F0F0;
+  background: #181818;
   border-radius: 10px;
-  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.5);
-  color: #010101;
+  box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.5);
+  color: #F0F0F0;
   padding: 5px;
   margin: 0 0 40px 0;
   width: 100%;
