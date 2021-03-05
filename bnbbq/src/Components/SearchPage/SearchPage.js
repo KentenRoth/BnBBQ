@@ -16,7 +16,11 @@ class SearchPage extends React.Component {
 
 	onSearch = async (searchTerm) => {
 		try {
-			const response = await axios.get(`/posts?search=${searchTerm}`);
+			const response = await axios.get(`/posts?`, {
+				params: {
+					search: searchTerm,
+				},
+			});
 			this.setState({ posts: response.data, hasSearched: true });
 		} catch (e) {
 			console.log(e);
