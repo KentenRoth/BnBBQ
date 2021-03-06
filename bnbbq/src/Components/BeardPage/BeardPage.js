@@ -18,8 +18,17 @@ class BeardPage extends React.Component {
 
 	render() {
 		return (
-			<div className="title">
-				<h1>Get Bearded!</h1>
+			<div className="pageContent">
+				<div className="container">
+					<div className="title">
+						<h1>Get Bearded!</h1>
+					</div>
+					<div className="beardPosts">
+						{this.state.posts.map((post) => {
+							return <PostCard key={post._id} post={post} />;
+						})}
+					</div>
+				</div>
 			</div>
 		);
 	}
