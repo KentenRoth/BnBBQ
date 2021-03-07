@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import BeardPost from './BeardPost';
 import BBQPost from './BBQPost';
+import GettingPost from './GettingPost';
 
 class Post extends React.Component {
 	constructor(props) {
@@ -12,21 +13,33 @@ class Post extends React.Component {
 	}
 
 	componentDidMount() {
-		// this code block will grab the the ID from the URL
-		// const queryString = window.location.search;
-		// const urlParams = new URLSearchParams(queryString);
-		// const search = urlParams.get('search');
-		// console.log(search);
-		// axios call to get specific post
+		const queryString = window.location.pathname;
+		axios
+			.get(`${queryString}`)
+			.then((response) => this.setState({ post: response.data }));
 	}
 
 	render() {
 		return (
-			<div>
-				<h1>Post Page</h1>
+			<div className="pageContent">
+				<div className="container">
+					<div className="title">{this.whatTypeOfPost()}</div>
+				</div>
 			</div>
 		);
 	}
+
+	whatTypeOfPost = () => {
+		const post = this.state.post;
+		console.log(post.length);
+		if (post.length === 0 || post.length > 1) {
+			return <GettingPost />;
+		} else if (post.tags[0] === 'barbecue' || post.tags[1] === 'barbecue') {
+			return <BBQPost post={post} />;
+		} else {
+			return <BeardPost post={post} />;
+		}
+	};
 }
 
 export default Post;

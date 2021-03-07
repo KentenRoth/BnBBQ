@@ -42,7 +42,7 @@ class App extends React.Component {
 						<Route path="/search" component={SearchPage} />
 						<Route path="/beardPage" component={BeardPage} />
 						<Route path="/bbqPage" component={BBQPage} />
-						<Route path="/post/" component={Post} />
+						<Route path="/posts/" component={Post} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />
