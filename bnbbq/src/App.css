@@ -43,17 +43,6 @@ body {
   height: 45px;
 }
 
-ul {
-  color: #F0F0F0;
-  display: flex;
-  list-style: none;
-  flex-flow: row nowrap;
-}
-ul li {
-  padding: 0px 20px;
-  z-index: 3;
-}
-
 .heading {
   display: flex;
   justify-content: center;
