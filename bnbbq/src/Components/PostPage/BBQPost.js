@@ -8,6 +8,10 @@ class BBQPost extends React.Component {
 
 	render() {
 		const image = this.props.post.f_image;
+		var date = new Date(this.props.post.created);
+		var year = date.getFullYear();
+		var month = ('0' + (date.getMonth() + 1)).slice(-2);
+		var day = ('0' + date.getDate()).slice(-2);
 		return (
 			<div className="pageContent">
 				<div className="container">
@@ -20,12 +24,19 @@ class BBQPost extends React.Component {
 						</div>
 						<div className="postTitle">
 							<h2>{this.props.post.title}</h2>
+							<p>Time: {this.props.post.time}</p>
+							<p>
+								Posted: {month}/{day}/{year}
+							</p>
 							<Ad />
 						</div>
 						<div>
 							{this.props.post.content.map((para, i) => {
 								return <p key={i}>{para}</p>;
 							})}
+						</div>
+						<div>
+							<h3>Lets Start!</h3>
 						</div>
 						<div>
 							<ol>
@@ -35,6 +46,9 @@ class BBQPost extends React.Component {
 							</ol>
 						</div>
 						<div>
+							<div>
+								<h3>TLDR</h3>
+							</div>
 							<ol>
 								{this.props.post.TLDR.map((tldr, i) => {
 									return <li key={i}>{tldr}</li>;
