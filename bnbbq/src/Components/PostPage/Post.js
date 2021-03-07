@@ -31,7 +31,6 @@ class Post extends React.Component {
 
 	whatTypeOfPost = () => {
 		const post = this.state.post;
-		console.log(post.length);
 		if (post.length === 0 || post.length > 1) {
 			return <GettingPost />;
 		} else if (post.tags[0] === 'barbecue' || post.tags[1] === 'barbecue') {
