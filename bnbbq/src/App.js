@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ScrollToTop from './Components/ScrollToTop';
 import NavBar from './Components/Nav/Nav';
 import LandingPage from './Components/LandingPage/LandingPage';
 import AboutPage from './Components/AboutPage/AboutPage';

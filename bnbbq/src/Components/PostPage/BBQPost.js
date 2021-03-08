@@ -2,6 +2,10 @@ import React from 'react';
 import Ad from '../Ad/Ad';
 
 class BBQPost extends React.Component {
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		const image = this.props.post.f_image;
 		var date = new Date(this.props.post.created);

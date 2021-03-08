@@ -17,6 +17,7 @@ class Post extends React.Component {
 		axios
 			.get(`${queryString}`)
 			.then((response) => this.setState({ post: response.data }));
+		window.scrollTo(0, 0);
 	}
 
 	render() {
