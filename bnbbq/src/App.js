@@ -68,11 +68,12 @@ class App extends React.Component {
 				}
 				return null;
 			});
-
+			const limitedBeard = beard.slice(-4);
+			const limitedbbq = bbq.slice(-4);
 			this.setState({
 				featuredPosts: feature,
-				beardPosts: beard,
-				bbqPosts: bbq,
+				beardPosts: limitedBeard,
+				bbqPosts: limitedbbq,
 			});
 		});
 	};
