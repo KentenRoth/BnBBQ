@@ -358,8 +358,22 @@ body {
   padding: 10px;
 }
 
-.break {
-  margin: 10px;
+.contentSectionLi {
+  padding: 10px 0px;
+}
+
+.ingredientsSection {
+  text-align: center;
+}
+
+.ingUl {
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.ingLi {
+  padding: 2px 0px;
 }
 
 .footer {

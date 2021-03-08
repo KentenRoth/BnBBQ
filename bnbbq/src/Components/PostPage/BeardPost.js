@@ -26,34 +26,54 @@ class BeardPost extends React.Component {
 						</div>
 						<div className="postTitle">
 							<h2>{this.props.post.title}</h2>
+						</div>
+						<div className="postSecondaryTitle">
 							<p>Location: {this.props.post.location}</p>
 							<p>
 								Posted: {month}/{day}/{year}
 							</p>
+						</div>
+						<div className="ad">
 							<Ad />
 						</div>
-						<div>
+						<div className="sectionHeading">
+							<h3>The Breakdown!</h3>
+						</div>
+						<div className="contentSection">
 							{this.props.post.content.map((para, i) => {
-								return <p key={i}>{para}</p>;
+								return (
+									<p className="contentSectionLi" key={i}>
+										{para}
+									</p>
+								);
 							})}
 						</div>
-						<div>
-							<p>Beard oil ingredients</p>
-							<ul>
+						<div className="ingredientsSection">
+							<p>Beard oil ingredients:</p>
+							<ul className="ingUl">
 								{this.props.post.ingredients.map((ing, i) => {
-									return <li key={i}>{ing}</li>;
+									return (
+										<li className="ingLi" key={i}>
+											{ing}
+										</li>
+									);
 								})}
 							</ul>
 						</div>
-						<div>
-							<p>Beard butter ingredients</p>
-							<ul>
+						<br />
+						<div className="ingredientsSection">
+							<p>Beard butter ingredients:</p>
+							<ul className="ingUl">
 								{this.props.post.ingredients2.map((ing, i) => {
-									return <li key={i}>{ing}</li>;
+									return (
+										<li className="ingLi" key={i}>
+											{ing}
+										</li>
+									);
 								})}
 							</ul>
 						</div>
-						<div>
+						<div className="ad">
 							<Ad />
 						</div>
 					</div>
