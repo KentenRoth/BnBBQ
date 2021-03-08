@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PostCard extends React.Component {
+	constructor(props) {
+		super(props);
+		this.getPostInfo = this.getPostInfo.bind(this);
+	}
 	componentDidMount() {}
 	render() {
 		const title = this.props.post.title;
@@ -22,6 +27,10 @@ class PostCard extends React.Component {
 		);
 	}
 
+	getPostInfo = (e) => {
+		console.log(e.target.id);
+	};
+
 	secondaryText = () => {
 		const time = this.props.post.time;
 		const location = this.props.post.location;
@@ -34,10 +43,30 @@ class PostCard extends React.Component {
 
 	postButton = () => {
 		const beardOrBBQ = this.props.post.tags;
+		const id = this.props.post._id;
 		if (beardOrBBQ[0] === 'barbecue' || beardOrBBQ[1] === 'barbecue') {
-			return <button className="postButton red">Lets Grill</button>;
+			return (
+				<Link to={`/posts/${id}`}>
+					<button
+						className="postButton red"
+						id={id}
+						onClick={this.getPostInfo}
+					>
+						Lets Grill
+					</button>
+				</Link>
+			);
 		} else {
-			return <button className="postButton green">Get Bearded</button>;
+			return (
+				<Link to={`/posts/${id}`}>
+					<button
+						className="postButton green"
+						onClick={this.getPostInfo}
+					>
+						Get Bearded
+					</button>
+				</Link>
+			);
 		}
 	};
 }
