@@ -2,10 +2,6 @@ import React from 'react';
 import Ad from '../Ad/Ad';
 
 class BBQPost extends React.Component {
-	componentDidMount() {
-		console.log(this.props.post);
-	}
-
 	render() {
 		const image = this.props.post.f_image;
 		var date = new Date(this.props.post.created);

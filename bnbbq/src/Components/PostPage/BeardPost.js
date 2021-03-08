@@ -2,12 +2,6 @@ import React from 'react';
 import Ad from '../Ad/Ad';
 
 class BeardPost extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	componentDidMount() {}
-
 	render() {
 		const image = this.props.post.f_image;
 		var date = new Date(this.props.post.created);
