@@ -34,11 +34,20 @@ class BBQPost extends React.Component {
 						<div className="ad">
 							<Ad />
 						</div>
-
 						<div className="contentSection">
 							{this.props.post.content.map((para, i) => {
 								return <p key={i}>{para}</p>;
 							})}
+						</div>
+						<div className="sectionHeading">
+							<h3>What You Need</h3>
+						</div>
+						<div className="foodIng">
+							<ul>
+								{this.props.post.ingredients.map((ing, i) => {
+									return <li key={i}>{ing}</li>;
+								})}
+							</ul>
 						</div>
 						<div className="sectionHeading">
 							<h3>Lets Start!</h3>
