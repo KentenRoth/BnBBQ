@@ -1,5 +1,6 @@
 import React from 'react';
 import PostCard from '../PostCard';
+import { Link } from 'react-router-dom';
 
 class BBQPosts extends React.Component {
 	componentDidMount() {}
@@ -15,7 +16,9 @@ class BBQPosts extends React.Component {
 					})}
 				</div>
 				<div className="largeButton">
-					<button className="moreQButton">More Q</button>
+					<Link to="/bbqPage">
+						<button className="moreQButton">More Q</button>
+					</Link>
 				</div>
 			</div>
 		);
