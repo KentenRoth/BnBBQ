@@ -225,11 +225,6 @@ body {
   color: #F0F0F0;
 }
 
-.aboutContent {
-  background: #181818;
-  padding: 50px;
-}
-
 .aboutContainer {
   margin: auto;
   max-width: 800px;
@@ -396,6 +391,26 @@ body {
 }
 .icon a {
   color: #F0F0F0;
+}
+
+@media (max-width: 650px) {
+  .featuredPosts, .bbqPosts, .beardPosts, .searchPosts {
+    display: block;
+  }
+
+  .postCard {
+    margin: auto;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .aboutContent {
+    padding: 0;
+  }
+
+  .aboutTextCard {
+    box-shadow: none;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
