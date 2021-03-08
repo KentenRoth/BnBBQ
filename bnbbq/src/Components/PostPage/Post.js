@@ -15,7 +15,7 @@ class Post extends React.Component {
 	componentDidMount() {
 		const queryString = window.location.pathname;
 		axios
-			.get(`${queryString}`)
+			.get(`https://bnbbq-api.herokuapp.com${queryString}`)
 			.then((response) => this.setState({ post: response.data }));
 		window.scrollTo(0, 0);
 	}
