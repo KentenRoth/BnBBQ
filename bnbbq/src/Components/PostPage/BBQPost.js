@@ -24,34 +24,48 @@ class BBQPost extends React.Component {
 						</div>
 						<div className="postTitle">
 							<h2>{this.props.post.title}</h2>
+						</div>
+						<div className="postSecondaryTitle">
 							<p>Time: {this.props.post.time}</p>
 							<p>
 								Posted: {month}/{day}/{year}
 							</p>
+						</div>
+						<div className="ad">
 							<Ad />
 						</div>
-						<div>
+
+						<div className="contentSection">
 							{this.props.post.content.map((para, i) => {
 								return <p key={i}>{para}</p>;
 							})}
 						</div>
-						<div>
+						<div className="sectionHeading">
 							<h3>Lets Start!</h3>
 						</div>
 						<div>
 							<ol>
 								{this.props.post.steps.map((step, i) => {
-									return <li key={i}>{step}</li>;
+									return (
+										<li className="stepsLi" key={i}>
+											{step}
+										</li>
+									);
 								})}
 							</ol>
 						</div>
 						<div>
-							<div>
+							<br />
+							<div className="sectionHeading">
 								<h3>TLDR</h3>
 							</div>
 							<ol>
 								{this.props.post.TLDR.map((tldr, i) => {
-									return <li key={i}>{tldr}</li>;
+									return (
+										<li className="tldrLi" key={i}>
+											{tldr}
+										</li>
+									);
 								})}
 							</ol>
 						</div>
