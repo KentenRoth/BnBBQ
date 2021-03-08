@@ -11,9 +11,11 @@ class BBQPage extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('/posts?search=barbecue').then((response) => {
-			this.setState({ posts: response.data });
-		});
+		axios
+			.get('https://bnbbq-api.herokuapp.com/posts?search=barbecue')
+			.then((response) => {
+				this.setState({ posts: response.data });
+			});
 	}
 
 	render() {

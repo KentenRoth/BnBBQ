@@ -11,9 +11,11 @@ class BeardPage extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('/posts?search=beard').then((response) => {
-			return this.setState({ posts: response.data });
-		});
+		axios
+			.get('https://bnbbq-api.herokuapp.com/posts?search=beard')
+			.then((response) => {
+				return this.setState({ posts: response.data });
+			});
 	}
 
 	render() {

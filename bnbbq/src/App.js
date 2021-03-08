@@ -51,7 +51,7 @@ class App extends React.Component {
 	}
 
 	getPosts = () => {
-		axios.get('/posts').then((response) => {
+		axios.get('https://bnbbq-api.herokuapp.com/posts').then((response) => {
 			const posts = response.data;
 			const feature = [];
 			const beard = [];
