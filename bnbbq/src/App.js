@@ -42,7 +42,7 @@ class App extends React.Component {
 						<Route path="/search" component={SearchPage} />
 						<Route path="/beardPage" component={BeardPage} />
 						<Route path="/bbqPage" component={BBQPage} />
-						<Route path="/posts/" component={Post} />
+						<Route path="/posts" component={Post} />
 					</Switch>
 				</BrowserRouter>
 				<Footer />
@@ -68,8 +68,8 @@ class App extends React.Component {
 				}
 				return null;
 			});
-			const limitedBeard = beard.slice(-4);
-			const limitedbbq = bbq.slice(-4);
+			const limitedBeard = beard.slice(-4).reverse();
+			const limitedbbq = bbq.slice(-4).reverse();
 			this.setState({
 				featuredPosts: feature,
 				beardPosts: limitedBeard,
