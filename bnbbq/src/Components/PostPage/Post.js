@@ -13,10 +13,7 @@ class Post extends React.Component {
 	}
 
 	componentDidMount() {
-		const queryString = window.location.pathname;
-		axios
-			.get(`https://bnbbq-api.herokuapp.com${queryString}`)
-			.then((response) => this.setState({ post: response.data }));
+		this.getPost();
 		window.scrollTo(0, 0);
 	}
 
@@ -29,6 +26,13 @@ class Post extends React.Component {
 			</div>
 		);
 	}
+
+	getPost = () => {
+		const queryString = window.location.pathname;
+		axios
+			.get(`https://bnbbq-api.herokuapp.com${queryString}`)
+			.then((response) => this.setState({ post: response.data }));
+	};
 
 	whatTypeOfPost = () => {
 		const post = this.state.post;

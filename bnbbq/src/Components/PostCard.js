@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class PostCard extends React.Component {
 	constructor(props) {
 		super(props);
-		this.getPostInfo = this.getPostInfo.bind(this);
 	}
 	componentDidMount() {}
 	render() {
@@ -27,10 +26,6 @@ class PostCard extends React.Component {
 		);
 	}
 
-	getPostInfo = (e) => {
-		console.log(e.target.id);
-	};
-
 	secondaryText = () => {
 		const time = this.props.post.time;
 		const location = this.props.post.location;
@@ -47,11 +42,7 @@ class PostCard extends React.Component {
 		if (beardOrBBQ[0] === 'barbecue' || beardOrBBQ[1] === 'barbecue') {
 			return (
 				<Link to={`/posts/${id}`}>
-					<button
-						className="postButton red"
-						id={id}
-						onClick={this.getPostInfo}
-					>
+					<button className="postButton red" id={id}>
 						Lets Grill
 					</button>
 				</Link>
@@ -59,12 +50,7 @@ class PostCard extends React.Component {
 		} else {
 			return (
 				<Link to={`/posts/${id}`}>
-					<button
-						className="postButton green"
-						onClick={this.getPostInfo}
-					>
-						Get Bearded
-					</button>
+					<button className="postButton green">Get Bearded</button>
 				</Link>
 			);
 		}
