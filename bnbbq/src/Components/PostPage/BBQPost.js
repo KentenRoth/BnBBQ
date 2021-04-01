@@ -8,6 +8,7 @@ class BBQPost extends React.Component {
 
 	render() {
 		const image = this.props.post.f_image;
+		const alt = this.props.post.alt;
 		var date = new Date(this.props.post.created);
 		var year = date.getFullYear();
 		var month = ('0' + (date.getMonth() + 1)).slice(-2);
@@ -19,7 +20,7 @@ class BBQPost extends React.Component {
 						<div className="postImage">
 							<img
 								src={`${process.env.PUBLIC_URL}/assets/images/${image}`}
-								alt={image}
+								alt={alt}
 							/>
 						</div>
 						<div className="postTitle">

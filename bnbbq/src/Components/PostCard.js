@@ -9,12 +9,14 @@ class PostCard extends React.Component {
 	render() {
 		const title = this.props.post.title;
 		const image = this.props.post.f_image;
+		const alt = this.props.post.alt;
+		console.log(alt);
 		return (
 			<div className="postCard">
 				<div className="postCardImage">
 					<img
 						src={`${process.env.PUBLIC_URL}/assets/images/${image}`}
-						alt="logo"
+						alt={`${alt}`}
 					/>
 				</div>
 				<div className="postCardTitle">
